@@ -1,0 +1,16 @@
+package com.student.satellite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBConnection {
+    // Change these values to match your MySQL installation.
+    private static final String URL = "jdbc:mysql://localhost:3306/satellite_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "your_mysql_password";
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+}
